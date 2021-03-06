@@ -6,7 +6,7 @@ kontekst.strokeStyle = "rgb(255,0,0)";
 kontekst.fillStyle = "rgb(0,255,0)";
 
 //kontekst.strokeRect(200,10,10,10);
-kontekst.fillRect(40,40,20,20);
+//kontekst.fillRect(40,40,20,20);
 //kontekst.fillRect(35,35,400,10);
 //kontekst.strokeRect(750,350,50,50);
 //kontekst.clearRect(0,0,400,200);
@@ -24,7 +24,7 @@ var x = 10;
 var y = 10;
 
 var snake  = [
-    {x : 6, y : 0},
+    {x : 2, y : 0},
     {x : 1, y : 0},
     {x : 0, Y : 0}
 ];
@@ -36,6 +36,7 @@ function jablkoLocaja() {
 
 function logKlawisz(event) {
     console.log(event);
+
     if (event.key==="ArrowUp") {
             console.log("Strzalka w gore");
             kierunekX = 0;
@@ -57,10 +58,11 @@ function logKlawisz(event) {
             kierunekY = 0;
         }
         else {
-            console.log("Problema");
+            console.log("Cos innego nis Stralki");
         }
     }
-}
+
+    document.addEventListener("keydown",logKlawisz);
 
 /*
 function konsola() {
